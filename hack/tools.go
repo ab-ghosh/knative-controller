@@ -36,4 +36,6 @@ import (
 	_ "knative.dev/hack"
 	_ "knative.dev/pkg/configmap/hash-gen"
 	_ "knative.dev/pkg/hack"
+
+	_ "sigs.k8s.io/controller-tools/cmd/controller-gen"
 )

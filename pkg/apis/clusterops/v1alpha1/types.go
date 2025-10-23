@@ -17,7 +17,7 @@ type Labeler struct {
 }
 
 type LabelerSpec struct {
-	Labels map[string]string
+	CustomLabels map[string]string `json:"customLabels"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

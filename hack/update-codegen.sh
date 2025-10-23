@@ -22,7 +22,7 @@ source $(dirname $0)/../vendor/knative.dev/hack/codegen-library.sh
 source "${CODEGEN_PKG}/kube_codegen.sh"
 
 # If we run with -mod=vendor here, then generate-groups.sh looks for vendor files in the wrong place.
-export GOFLAGS=-mod=
+export GOFLAGS=-mod=mod
 
 echo "=== Update Codegen for $MODULE_NAME"
 
@@ -49,5 +49,5 @@ group "Knative Codegen"
 # Knative Injection
 ${KNATIVE_CODEGEN_PKG}/hack/generate-knative.sh "injection" \
   $MODULE_NAME/pkg/client $MODULE_NAME/pkg/apis \
-  "pramodbindal:v1alpha1" \
+  "clusterops:v1alpha1" \
   --go-header-file ${REPO_ROOT_DIR}/hack/custom-boilerplate.go.txt
